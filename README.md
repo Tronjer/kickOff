@@ -1,7 +1,10 @@
 # kickOff v0.1.0
 
 > Framework for Frontend Development powered by Grunt
+
 > Includes Bootstrap, FontAwesome, Sass, Compass, Modernizr and jQuery
+
+> A [Demo](matthias-kalden.de/kickoff) can be watched [here](matthias-kalden.de/kickoff)
 
 ## Features
 - Compiling and concatenating of Sass files to CSS
