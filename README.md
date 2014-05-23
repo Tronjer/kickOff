@@ -4,7 +4,7 @@
 
 > Includes Bootstrap, FontAwesome, Sass, Compass, Modernizr and jQuery
 
-> A [Demo](matthias-kalden.de/kickoff) can be watched [here](matthias-kalden.de/kickoff)
+> A [Demo](http://matthias-kalden.de/kickoff) can be watched [here](http://matthias-kalden.de/kickoff)
 
 ## Features
 - Compiling and concatenating of Sass files to CSS
