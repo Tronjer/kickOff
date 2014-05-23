@@ -1,0 +1,89 @@
+/** Placeholders belong inside
+** app/sass/modules/_placeholders.scss
+**/
+
+%box {
+  background-color: #202020;
+  @include border-radius(5px);
+  @include box-shadow(0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 7px 0 rgba(0, 0, 0, 0.8) inset);
+}
+%border {
+  border-bottom: 1px solid #121212;
+  @include box-shadow(0 1px 0 rgba(255, 255, 255, 0.07));
+  padding: 0 0 20px;
+}
+%kickoff {
+  color: $brand-warning;
+  font-weight: 200;
+}
+
+body.index {
+  background-color: #2F2F2F;
+  color: #ccc;
+  .kickoff {
+    font-size: 18px;
+    @extend %kickoff;
+  }
+  .navbar-inverse {
+    background-color: #7d7e7d;
+    @include filter-gradient(#7d7e7d, #0e0e0e, vertical);
+    $experimental-support-for-svg: true;
+    @include background-image(linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%));
+  }
+  .jumbotron, .doc {
+    @extend %box;
+  }
+  .jumbotron {
+    margin: 100px 0 30px;
+    h1 {
+      @extend %border;
+      @include box-shadow(0 1px 0 rgba(255, 255, 255, 0.07));
+      @extend %kickoff;
+      padding: 0 0 5px;
+    }
+  }
+  h2 {
+    font-size: 36px;
+    @extend %border;
+  }
+  section {
+    margin: 45px 0 0;
+    h3 {
+      font-size: 28px;
+    }
+    h4 {
+      font-size: 22px;
+      margin: 35px 0 10px;
+      &:first-child {
+        margin: 10px 0;
+      };
+    }
+    h5 {
+      font-size: 17px;
+      margin: 20px 0 5px;
+    }
+    .doc {
+      font-size: 15px;
+      margin: 15px 0 0;
+      padding: 20px 30px 10px;
+    }
+    code {
+      padding: 0 4px;
+      background-color: inherit;
+      color: $brand-warning;
+    }
+    ul {
+      list-style: none;
+      margin-bottom: 0;
+      li {
+        line-height: 170%;
+      }
+    }
+  }
+  footer {
+    margin: 50px 0 0;
+    span {
+      margin: 0 5px 0 10px;
+    }
+  }
+}

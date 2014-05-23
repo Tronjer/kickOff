@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <title>kickOff</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/modernizr.min.js"></script>
+  </head>
+  <body class="index">
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">My Project</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container" role="banner">
+      <div class="jumbotron">
+        <h1>kickOff</h1>
+        <p class="lead">This is a Framework for Frontend Development powered by Grunt<br>
+        It includes Bootstrap, FontAwesome, Sass, Compass, Modernizr and jQuery</p>
+      </div>
+    </div>
+
+    <article class="container" role="main">
+      <h2>Getting started</h2>
+      <section>
+        <h3>Features</h3>
+        <div class="doc">
+          <ul class="list-group">
+            <li>- Compiling and concatenating of Sass files to CSS</li>
+            <li>- Linting and concenating of custom JavaScript and vendor libraries</li>
+            <li>- Optimizing of images</li>
+            <li>- Observing of file changes and immediately processing of updated code</li>
+            <li>- Express server on localhost with browser autoreload. No need to hit the refresh button anymore </li>
+            <li>- Clean production build with minified files for optimal performance</li>
+            <li>- Bootstrap, FontAwesome, Sass, Compass, Modernizr and jQuery on Board</li>
+            <li>- Compass Helper enabled</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h3>Up and running</h3>
+        <div class="doc">
+          <h4>Requirements</h4>
+          <p>
+            <a href="https://github.com/Tronjer/kickOff" class="kickoff">kickOff</a> requires <a href="http://www.ruby-lang.org/en/downloads">Ruby</a>, <a href="http://sass-lang.com/tutorial.html">Sass</a>, <a href="http://compass-style.org/install">Compass</a>, <a href="http://nodejs.org">Node</a> and <a href="http://gruntjs.com">Grunt</a>.
+          </p>
+          <p>
+            If you're on OS X or Linux you probably already have Ruby installed; test with <code>ruby -v</code> in your terminal.<br>
+            When you've confirmed your Ruby installation, run <code>gem update --system && gem install compass</code> to install Compass and Sass.
+          </p>
+          <p>
+            Installing Node and NPM up is easy, as there are pre-built <a href="http://nodejs.org/download">packages</a> for every platform available.
+          </p>
+          <p>
+            For getting up Grunt check out the <a href="http://gruntjs.com/getting-started">starting guide</a>
+          </p>
+          <p>
+            After checking out <a href="https://github.com/Tronjer/kickOff" class="kickoff">kickOff</a> move to the project folder in your console and run <code>npm install</code> to install all required Node modules.
+          </p>
+          <h4>Files and Stuff</h4>
+          <h5>HTML</h5>
+          <p>
+            Once you got everything up and running, head to the app folder of your <a href="https://github.com/Tronjer/kickOff" class="kickoff">kickoff</a> project. There you find an index.html (this file) and 3 folders: css, img and js. Feel free to add aditional .html files inside app or subdirectories (i.e. app/views/, app/views/partials/, etc.).
+          </p>
+          <h5>CSS</h5>
+          <p>
+            Put your custom stylesheets as .scss partials (_filename.scss) under app/css/sass subdirectories. There exists already a Sass file structure with kind of a manifest file (_all.scss) in every subdir fo regsitering partials. If you don't know where to write your custom styles, app/sass/partials/_layout.scss would be a good starting point. Do <strong>not</strong> store  additional files directly in /app/css as those won't get considered for compiling. You also can disable Bootstrap components and FontAwesome if that's too much overload for your project.
+          </p>
+          <h5>JavaScript</h5>
+          <p>
+            Vendor libraries (i.e. jQuery) belong into app/js/libs. Store your custom JavaScripts in app/js/scripts.
+          </p>
+          <h5>Images</h5>
+          <p>
+            Images belong into app/img and have to be .png, .jpg or .gif in order to get optimized.
+          </p>
+          <h5>Fonts</h5>
+          <p>
+             Place your webfonts in app/css/fonts.
+          </p>
+          <h4>Running Tasks</h4>
+          <p>
+            Move to the root of the project folder in your console and simply run <code>grunt</code>. This compiles all .scss files inside your Sass directories to /app/css/styles.css, JavaScript vendor files inside app/js/libs to app/js/lib.js as well as custom ones inside app/js/scripts/js to app/js/main.js, and optimize your .png, .jpg and .gif located in app/img. Every change to .html, .scss, and .js files is watched and triggers a compilation. Your browser will open a new window for localhost:3000 and shows every update immediately. Should you dislike the autoreload, open the Gruntfile.js in your project's root and set var server to false. To stop Grunt type <code>ctrl+c</code> in your console.
+          </p>
+          <p>
+            For a lean production build run <code>grunt --env=production</code>. This will wipe/recreate the entire production folder (if existent) to resync with your app directory, and copy/minify all .html, .css, .js files, images and webfonts.
+          </p>
+          <h4>Known Issues</h4>
+          <p>
+            <a href="https://github.com/Tronjer/kickOff" class="kickoff">kickOff</a> observes any modification to your HTML, JS, CSS, and images. This not only implies amendments within existing files but also renaming, deleting and adding of new files. However, to trigger the watch tasks for JavaScript and images, there have to be at least one file in app/js/scripts, respectively app/img before you run <code>grunt</code>. This is an issue of the grunt-contrib-watch module and will be hopefully adressed in a later release.
+          </p>
+        </div>
+      </section>
+    </article>
+
+    <footer role="contentinfo">
+      <div class="container">
+        <p>
+          <i class="fa fa-user fa-2x"></i> <a href="https://github.com/Tronjer/kickOff" class="kickoff">kickOff</a> by Matthias Kalden 2014
+        </p>
+      </div>
+    </footer>
+    <script src="js/libs.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
